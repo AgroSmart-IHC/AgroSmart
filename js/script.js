@@ -1,3 +1,5 @@
+/* clima*/
+
 const temp = document.querySelector(".info-clima h2");
 const estado = document.querySelector(".info-clima h3");
 const lluvia = document.querySelector(".info-clima p");
