@@ -554,40 +554,67 @@ header {
 
 
 /* =========================
-   QUIÉNES SOMOS
+   QUIÉNES SOMOS (NUEVO HERO)
 ========================= */
 
 .hero-quienes {
+    position: relative;
+    width: 100%;
+    height: 380px; /* 👈 más bajo que antes */
+    overflow: hidden;
     display: flex;
     align-items: center;
-    background: white;
 }
 
-.texto-quienes {
-    width: 40%;
-    padding: 60px;
-}
-
-.texto-quienes h1 {
-    color: var(--verde);
-    font-size: 70px;
-    margin-bottom: 20px;
-}
-
-.texto-quienes p {
-    font-size: 22px;
-    line-height: 1.4;
-}
-
+/* IMAGEN DE FONDO */
 .imagen-quienes {
-    width: 60%;
+    width: 100%;
+    height: 100%;
 }
 
 .imagen-quienes img {
     width: 100%;
-    height: 500px;
+    height: 100%;
     object-fit: cover;
 }
+
+/* DEGRADADO BLANCO */
+.hero-quienes-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,0.95) 20%,
+        rgba(255,255,255,0.6) 40%,
+        rgba(255,255,255,0) 70%
+    );
+    z-index: 1;
+}
+
+/* TEXTO ENCIMA */
+.hero-quienes-content {
+    position: absolute;
+    z-index: 2;
+    left: 80px;
+    max-width: 520px;
+}
+
+.hero-quienes-content h1 {
+    color: var(--verde);
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero-quienes-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* =========================
+   ESENCIA (igual pero mejorado leve)
+========================= */
 
 .esencia {
     text-align: center;
@@ -603,6 +630,10 @@ header {
 .esencia p {
     font-size: 20px;
 }
+
+/* =========================
+   MISIÓN / VISIÓN / VALORES
+========================= */
 
 .cards-mision {
     width: 85%;
