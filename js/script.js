@@ -1,3 +1,5 @@
+
+
 /* clima*/
 
 const temp = document.querySelector(".info-clima h2");
@@ -39,4 +41,5 @@ setInterval(actualizarClima, 5000);
 
 // inicial
 actualizarClima();
+
 
