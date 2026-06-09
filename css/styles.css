@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background: #F6F6F6;
+    background: #ffffff;
     color: #222;
 }
 
@@ -93,7 +93,7 @@ header {
     position: relative;
     width: 100%;
     max-width: 1920px;
-    height: 520px;
+    height: 550px;
     margin: auto;
     overflow: hidden;
 }
@@ -142,19 +142,18 @@ header {
 .hero-text p {
     font-size: 22px;
     line-height: 1.6;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .btn-descarga {
     background: var(--verde);
     color: white;
     border: none;
-    padding: 10px 22px;
+    padding: 15px 22px;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-
     display: flex;
     align-items: center;
     gap: 8px;
@@ -174,13 +173,12 @@ header {
 .cards {
     display: flex;
     align-items: center;
-
     background: white;
     border-radius: 18px;
     box-shadow: var(--sombra);
-    width: 460px;
-    height: 105px;
-    margin-top: 25px;
+    width: 550px;
+    height: 115px;
+    margin-top: 30px;
 }
 
 .card {
@@ -194,7 +192,6 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-
     padding: 12px 16px;
 }
 
@@ -205,21 +202,21 @@ header {
 }
 
 .info-clima h2 {
-    font-size: 26px;
+    font-size: 30px;
     color: var(--texto);
     line-height: 1;
     margin-bottom: 3px;
 }
 
 .info-clima h3 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 2px;
     color: #3d3d3d;
 }
 
 .info-clima p {
-    font-size: 12px;
+    font-size: 16px;
     color: #666;
 }
 
@@ -230,7 +227,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 12px 16px;
     border-left: 1px solid #D9D9D9;
 }
@@ -241,13 +237,13 @@ header {
 }
 
 .info-cultivo h3 {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--verde);
     margin-bottom: 5px;
 }
 
 .info-cultivo p {
-    font-size: 12px;
+    font-size: 16px;
     color: #666;
     margin-top: 5px;
 }
@@ -256,13 +252,13 @@ header {
     display: block;
     color: #4ba13a;
     font-weight: 700;
-    font-size: 17px;
-    margin: 2px 0;
+    font-size: 26px;
+    margin: 1px 0;
 }
 
 .icono-planta {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 
@@ -273,7 +269,7 @@ header {
 
 .testimonios {
     width: 90%;
-    margin: 40px auto;
+    margin: 30px auto;
     display: flex;
     justify-content: space-between;
     gap: 25px;
@@ -282,7 +278,7 @@ header {
 /* CARD PRINCIPAL */
 .testimonio {
     flex: 1;
-    height: 160px; /* importante para mantener altura uniforme */
+    height: 160px; 
     perspective: 1000px;
 }
 
@@ -339,7 +335,7 @@ header {
 }
 
 .testimonio-front p {
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
 }
 
@@ -375,10 +371,12 @@ header {
 ========================= */
 
 .titulo-pagina {
-    text-align: center;
-    padding: 70px 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: -60px;
+    padding: 70px 0 50px;
+    text-align: left;
 }
-
 .titulo-pagina h4 {
     color: var(--verde-claro);
     font-size: 35px;
@@ -386,42 +384,149 @@ header {
 
 .titulo-pagina h2 {
     color: var(--verde);
-    font-size: 50px;
-    margin-top: 10px;
+    font-size: 25px;
+    margin-bottom: -30px;
 }
+
+/* ---------- CARDS ---------- */
 
 .servicios-grid {
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding-bottom: 80px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+     padding-bottom: 50px; 
 }
 
 .servicio-card {
     background: white;
     border-radius: 20px;
     box-shadow: var(--sombra);
-    padding: 30px;
-    text-align: center;
+    padding: 25px;
+    text-align: left; 
     transition: .3s;
 }
 
-.servicio-card:hover {
-    transform: translateY(-10px);
-}
-
 .servicio-card img {
-    width: 90px;
-    margin-bottom: 20px;
+    width: 80px;
+    margin-bottom: 15px;
+    display: block;
 }
 
 .servicio-card h3 {
-    color: var(--verde);
-    margin-bottom: 15px;
+    color: var(--texto);
+    margin-bottom: 10px;
+    text-align: left;
 }
 
+.servicio-card p {
+    text-align: left;
+}
+
+.servicio-card:hover {
+    transform: translateY(-8px);
+}
+
+
+
+/* ---------- BENEFICIOS ---------- */
+
+.beneficios-servicios {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 80px;
+
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+/* LADO IZQUIERDO */
+
+.lado-imagen {
+    width: 50%;
+    position: relative;
+}
+
+.imagen-beneficios {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* CARD RIEGO */
+
+.riego-card {
+    position: absolute;
+    top: -35px;
+    left: 30px;
+
+    width: 320px;
+
+    background: #ECF4FB;
+    border-radius: 20px;
+    padding: 18px;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    box-shadow: var(--sombra);
+}
+
+.riego-card img {
+    width: 55px;
+}
+
+.riego-card h3 {
+    color: #2d6a9f;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.riego-card p {
+    font-size: 13px;
+}
+
+/* LADO DERECHO */
+
+.lado-texto {
+    width: 50%;
+}
+
+.lado-texto h2 {
+    color: var(--verde);
+    font-size: 50px;
+    margin-bottom: 35px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.beneficio-item img {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.beneficio-contenido h3 {
+    color: var(--verde);
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.beneficio-contenido p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+}
 
 /* =========================
    BENEFICIOS
@@ -724,6 +829,10 @@ footer {
 
 @media (max-width: 768px) {
 
+    /* =========================
+       NAVBAR
+    ========================= */
+
     .navbar {
         width: 95%;
         height: auto;
@@ -745,6 +854,10 @@ footer {
     .logo img {
         width: 150px;
     }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
         height: 450px;
@@ -772,6 +885,10 @@ footer {
     .hero-img {
         height: 100%;
     }
+
+    /* =========================
+       CARDS HERO
+    ========================= */
 
     .cards {
         width: 95%;
@@ -812,6 +929,10 @@ footer {
         font-size: 16px;
     }
 
+    /* =========================
+       TESTIMONIOS
+    ========================= */
+
     .testimonios {
         flex-direction: column;
         align-items: center;
@@ -822,19 +943,131 @@ footer {
         max-width: 320px;
     }
 
+    /* =========================
+       SERVICIOS
+    ========================= */
+
+    .titulo-pagina {
+        width: 95%;
+        margin-top: 0;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .titulo-pagina h4 {
+        font-size: 24px;
+    }
+
+    .titulo-pagina h2 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .servicios-grid {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    .servicio-card {
+        padding: 20px;
+    }
+
+    .servicio-card img {
+        width: 65px;
+        margin-bottom: 12px;
+    }
+
+    .servicio-card h3 {
+        font-size: 18px;
+    }
+
+    .servicio-card p {
+        font-size: 14px;
+    }
+
+    /* =========================
+       BENEFICIOS SERVICIOS
+    ========================= */
+
+    .beneficios-servicios {
+        width: 95%;
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 50px;
+    }
+
+    .lado-imagen,
+    .lado-texto {
+        width: 100%;
+    }
+
+    .imagen-beneficios {
+        height: 240px;
+    }
+
+    .riego-card {
+        width: 260px;
+        left: 15px;
+        top: -20px;
+        padding: 15px;
+    }
+
+    .riego-card img {
+        width: 45px;
+    }
+
+    .riego-card h3 {
+        font-size: 15px;
+    }
+
+    .riego-card p {
+        font-size: 12px;
+    }
+
+    .lado-texto h2 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .beneficio-item {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .beneficio-item img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .beneficio-contenido h3 {
+        font-size: 20px;
+    }
+
+    .beneficio-contenido p {
+        font-size: 15px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 25px;
     }
-    
+
     .footer-redes {
-    display: block;
-    margin: 15px auto 0 auto;
+        display: block;
+        margin: 15px auto 0 auto;
     }
 
     .footer-col {
         width: 100%;
     }
+
 }
