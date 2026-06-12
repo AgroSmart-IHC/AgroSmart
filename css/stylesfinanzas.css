@@ -1,0 +1,521 @@
+/* ====================================
+   RESET
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8faf8;
+    color:#333;
+}
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --verde: #45603F;
+    --verde-claro: #D9EB96;
+    --blanco: #FFFFFF;
+    --gris: #F4F4F4;
+    --texto: #222222;
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+
+header {
+    background: white;
+    width: 100%;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 180px;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--verde);
+}
+
+.activo {
+    color: var(--verde) !important;
+    text-decoration: underline !important;
+}
+
+.btn-contacto {
+    background: var(--verde);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.btn-contacto:hover {
+    opacity: .9;
+}
+
+
+.hero-finanzas{
+    width:100%;
+    min-height:420px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+    background:
+    linear-gradient(
+        rgba(69,96,63,.55),
+        rgba(216,233,160,.35)
+    ),
+    url("../imagenes/agricultor.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero-finanzas-content{
+    max-width:850px;
+}
+
+.hero-finanzas-content h1{
+    color:white;
+    font-size:3.2rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-finanzas-content p{
+    color:white;
+    font-size:1.15rem;
+    line-height:1.8;
+}
+
+/* ====================================
+   INFORMACIÓN ROI
+==================================== */
+
+.info-roi{
+    padding:80px 5%;
+}
+
+.info-roi-container{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+.info-roi-container h2{
+    color:#45603F;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.info-roi-container > p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+}
+
+.tips-roi{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.tip-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:var(--sombra);
+}
+
+.tip-card h3{
+    color:#45603F;
+    margin-bottom:15px;
+}
+
+.tip-card p{
+    color:#666;
+    line-height:1.6;
+}
+
+
+/* ====================================
+   ROI SECTION
+==================================== */
+
+.roi-section{
+    padding:80px 20px;
+}
+
+.roi-container{
+    max-width:1000px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+}
+
+.roi-container h2{
+    text-align:center;
+
+    color:#45603f;
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+}
+
+.roi-container p{
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:40px;
+}
+
+
+/* ====================================
+   FORMULARIO
+==================================== */
+
+.form-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    color:#45603f;
+}
+
+.input-group input{
+    padding:15px;
+
+    border:2px solid #e0e0e0;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.input-group input:focus{
+    outline:none;
+
+    border-color:#45603f;
+}
+
+
+/* ====================================
+   BOTÓN
+==================================== */
+
+.btn-roi{
+    display:block;
+
+    margin:40px auto 0;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    background:#45603f;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-roi:hover{
+    transform:translateY(-3px);
+
+    background:#45603f;
+}
+
+
+/* ====================================
+   RESULTADOS
+==================================== */
+
+.resultado-section{
+    padding:20px 20px 100px;
+}
+
+.titulo-resultados{
+    text-align:center;
+
+    color:#45603f;
+
+    margin-bottom:40px;
+
+    font-size:2rem;
+}
+
+.resultado-container{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+}
+
+.resultado-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+}
+
+.resultado-card h3{
+    color:#555;
+
+    margin-bottom:15px;
+
+    font-size:1rem;
+}
+
+.resultado-card span{
+    color:#45603f;
+
+    font-size:2rem;
+
+    font-weight:700;
+}
+
+.roi-card{
+    background:#45603F;
+    transform:scale(1.05);
+}
+
+.roi-card h3{
+    color:white;
+}
+
+.roi-card span{
+    color:white;
+}
+
+/* ====================================
+   MENSAJE ROI
+==================================== */
+
+.mensaje-roi{
+    max-width:900px;
+    margin:40px auto 0;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--sombra);
+}
+
+.mensaje-roi h3{
+    color:#45603F;
+    margin-bottom:15px;
+}
+
+.mensaje-roi p{
+    color:#555;
+    line-height:1.8;
+}
+.ayuda-finanzas{
+    margin-top:20px;
+    text-align:center;
+    color:#666;
+    font-size:.9rem;
+    line-height:1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--verde);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.footer-col {
+    width: 300px;
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+.footer-redes {
+    width: 140px;      
+    max-width: 100%;   
+    height: auto;
+    margin-top: 15px;
+    display: block;
+}
+
+.footer-col h3 {
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    background: var(--verde);
+    color: white;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media (max-width:1100px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .resultado-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .tips-roi{
+        grid-template-columns:1fr;
+    }
+
+    .hero-finanzas-content h1{
+        font-size:2.4rem;
+    }
+
+    footer{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:40px;
+    }
+
+    .footer-col{
+        width:100%;
+        max-width:400px;
+    }
+
+}
+
+@media (max-width:700px){
+
+    .hero-finanzas{
+        min-height:auto;
+        padding:100px 20px 60px;
+    }
+
+    .hero-finanzas-content h1{
+        font-size:2rem;
+    }
+
+    .hero-finanzas-content p{
+        font-size:1rem;
+    }
+
+    .roi-container{
+        padding:30px 20px;
+    }
+
+    .resultado-container{
+        grid-template-columns:1fr;
+    }
+
+}
