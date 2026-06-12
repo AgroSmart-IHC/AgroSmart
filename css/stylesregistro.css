@@ -104,14 +104,13 @@ header {
     opacity: .9;
 }
 
-/* ====================================
-   HERO
-==================================== */
+/* HERO */
 
 .hero {
     position: relative;
     width: 100%;
-    height: 868px;
+    max-width: 1920px;  
+    height: 1000px;
     overflow: hidden;
 }
 
@@ -201,9 +200,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* ==========================================================================
-   BLOQUE DERECHO: FORMULARIO DE REGISTRO RE-ALINEADO (US01)
-   ========================================================================== */
+/* BLOQUE DERECHO: FORMULARIO DE REGISTRO */
 .register-card-container {
     width: 440px;
     flex-shrink: 0;
@@ -324,34 +321,64 @@ header {
     transform: translateY(-1px);
 }
 
-/* Mensajes de Alerta Estilizados */
-.alert-message {
-    padding: 12px 16px;
-    border-radius: 12px;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 20px;
+/* Selección de Plan */
+
+.plans-selector {
     display: flex;
-    align-items: center;
     gap: 10px;
+    margin-top: 5px;
 }
 
-.alert-danger {
-    background-color: #F9CBCB; 
-    color: #822c2c;
-    border: 1px solid #f2b3b3;
+.plan-option {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
 }
 
-.alert-warning {
-    background-color: #F9F6CB; 
-    color: #736b1d;
-    border: 1px solid #ece79b;
+.plan-option input[type="radio"] {
+    display: none;
 }
 
-.alert-success {
-    background-color: #DFF9CB; 
-    color: #32591c;
-    border: 1px solid #c3eda7;
+
+.plan-card-content {
+    background-color: #F8F9F8;
+    border: 1.5px solid #cdd5cb;
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.plan-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2F3E2C;
+}
+
+.plan-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--verde);
+}
+
+
+.plan-option:hover .plan-card-content {
+    border-color: var(--verde);
+    background-color: #ffffff;
+}
+
+/* Estado Activo / Seleccionado de forma nativa por CSS */
+.plan-option input[type="radio"]:checked + .plan-card-content {
+    border-color: var(--verde);
+    background-color: #EBF2EB; /* Sutil fondo verde pálido */
+    box-shadow: 0 0 0 3px rgba(69, 96, 63, 0.15);
+}
+
+.plan-option input[type="radio"]:checked + .plan-card-content .plan-name {
+    color: var(--verde);
 }
 
 footer {
