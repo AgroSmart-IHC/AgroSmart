@@ -336,7 +336,7 @@ header {
 
     display: flex;
     gap: 20px;
-    align-items: center; /* 👈 clave: mismo alto visual */
+    align-items: center;
 }
 
 .testimonio-front img {
