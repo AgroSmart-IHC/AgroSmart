@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Dashboard</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesdashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="inicio.html">
+                    <img src="imagenes/logo.png" alt="AgroSmart">
+                </a>
+            </div>
+
+            <ul class="menu">
+
+                <li><a class="activo" href="dashboard.html">Inicio</a></li>
+                <li><a href="finanzas.html">Finanzas</a></li>
+                <li><a href="planes.html">Pagina 2</a></li>
+                <li><a href="quienesSomos.html">Pagina 3</a></li>
+                <li>
+                    <a href="#contacto" class="btn-contacto">
+                        Contáctanos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="user-btn">
+                        <img src="imagenes/user.png" alt="Usuario">
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO DASHBOARD
+    ========================= -->
+
+    <section class="hero-dashboard">
+
+        <div class="hero-dashboard-content">
+
+            <h1>
+                Bienvenido a AgroSmart
+            </h1>
+
+            <p>
+                Monitorea tus cultivos, revisa alertas importantes
+                y toma decisiones inteligentes desde un solo lugar.
+            </p>
+
+            <button
+                id="btnActualizar"
+                class="btn-dashboard">
+
+                Actualizar Datos
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MÉTRICAS
+    ========================= -->
+
+    <section class="metricas-section">
+
+        <h2>
+            Resumen General
+        </h2>
+
+        <div class="metricas-grid">
+
+            <div class="metrica-card">
+
+                <h3>
+                    Cultivos Activos
+                </h3>
+
+                <span id="cultivosActivos">
+                    8
+                </span>
+
+                <p>
+                    Campañas registradas
+                </p>
+
+            </div>
+
+
+            <div class="metrica-card">
+
+                <h3>
+                    Alertas Activas
+                </h3>
+
+                <span id="alertasActivas">
+                    3
+                </span>
+
+                <p>
+                    Requieren atención
+                </p>
+
+            </div>
+
+
+            <div class="metrica-card">
+
+                <h3>
+                    Producción Estimada
+                </h3>
+
+                <span id="produccionEstimada">
+                    12 Tn
+                </span>
+
+                <p>
+                    Próxima cosecha
+                </p>
+
+            </div>
+
+
+            <div class="metrica-card">
+
+                <h3>
+                    Rentabilidad
+                </h3>
+
+                <span id="rentabilidadPromedio">
+                    42%
+                </span>
+
+                <p>
+                    Promedio actual
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CLIMA + ALERTAS
+    ========================= -->
+
+    <section class="dashboard-info">
+
+        <!-- CLIMA -->
+
+        <div class="clima-card">
+
+            <h2>
+                Resumen Climático Diario
+            </h2>
+
+            <div class="clima-principal">
+
+                <img
+                    id="iconoClima"
+                    src="imagenes/sol.png"
+                    alt="Clima">
+
+                <div>
+
+                    <h3 id="temperaturaClima">
+                        24°C
+                    </h3>
+
+                    <p id="estadoClima">
+                        Soleado
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="clima-detalles">
+
+                <p id="humedadClima">
+                    💧 Humedad: 68%
+                </p>
+
+                <p id="lluviaClima">
+                    🌧 Prob. lluvia: 20%
+                </p>
+
+                <p id="vientoClima">
+                    💨 Viento: 12 km/h
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ALERTAS -->
+
+        <div class="alertas-card">
+
+            <h2>
+                Alertas Prioritarias
+            </h2>
+
+            <div
+                id="alerta1"
+                class="alerta-item alerta-roja">
+
+                ⚠ Posible lluvia intensa en las próximas 24 horas
+
+            </div>
+
+            <div
+                id="alerta2"
+                class="alerta-item alerta-amarilla">
+
+                ⚠ Riesgo moderado de plagas detectado
+
+            </div>
+
+            <div
+                id="alerta3"
+                class="alerta-item alerta-verde">
+
+                ⚠ Se recomienda riego preventivo esta mañana
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ESTADO CULTIVOS
+    ========================= -->
+
+    <section class="cultivos-section">
+
+        <h2>
+            Estado de Cultivos
+        </h2>
+
+        <div class="cultivos-grid">
+
+            <div class="cultivo-card">
+
+                <h3>
+                    Papa
+                </h3>
+
+                <span class="estado bueno">
+                    Bueno
+                </span>
+
+                <p>
+                    Desarrollo normal y crecimiento saludable.
+                </p>
+
+            </div>
+
+
+            <div class="cultivo-card">
+
+                <h3>
+                    Tomate
+                </h3>
+
+                <span class="estado bueno">
+                    Bueno
+                </span>
+
+                <p>
+                    Sin incidencias registradas.
+                </p>
+
+            </div>
+
+
+            <div class="cultivo-card">
+
+                <h3>
+                    Maíz
+                </h3>
+
+                <span class="estado atencion">
+                    Atención
+                </span>
+
+                <p>
+                    Revisar humedad del terreno.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACCIONES RÁPIDAS
+    ========================= -->
+
+    <section class="acciones-section">
+
+        <h2>
+            Acciones Rápidas
+        </h2>
+
+        <div class="acciones-grid">
+
+            <a href="finanzas.html" class="accion-card">
+
+                <h3>
+                    Finanzas
+                </h3>
+
+                <p>
+                    Calcula ROI y utilidades agrícolas.
+                </p>
+
+            </a>
+
+
+            <a href="#" class="accion-card">
+
+                <h3>
+                    Alertas
+                </h3>
+
+                <p>
+                    Consulta alertas climáticas recientes.
+                </p>
+
+            </a>
+
+
+            <a href="#" class="accion-card">
+
+                <h3>
+                    Cultivos
+                </h3>
+
+                <p>
+                    Revisa el estado de producción.
+                </p>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INFORMACIÓN EXTRA
+    ========================= -->
+
+    <section class="dashboard-info-extra">
+
+        <div class="dashboard-extra-card">
+
+            <h2>
+                Centro de Monitoreo Agrícola
+            </h2>
+
+            <p>
+                Este panel resume la información más importante de tu
+                producción agrícola. Aquí podrás visualizar indicadores
+                clave de rendimiento, alertas climáticas preventivas,
+                condiciones meteorológicas y el estado general de tus
+                cultivos para facilitar la toma de decisiones.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer id="contacto">
+
+        <div class="footer-col">
+
+            <img
+                src="imagenes/logo.png"
+                class="footer-logo"
+                alt="AgroSmart">
+
+            <p>
+                Tecnología y crecimiento al servicio del campo.
+                Cultivando un futuro más inteligente.
+            </p>
+
+            <img
+                src="imagenes/redes.png"
+                class="footer-redes"
+                alt="Redes sociales">
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Navegación
+            </h3>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="finanzas.html">
+                Finanzas
+            </a>
+
+            <a href="quienesSomos.html">
+                Quiénes Somos
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Contacto
+            </h3>
+
+            <p>
+                info@agrosmart.com
+            </p>
+
+            <p>
+                +51 999 999 999
+            </p>
+
+            <p>
+                Lima, Perú
+            </p>
+
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 AgroSmart. Todos los derechos reservados.
+    </div>
+
+    <script src="js/scriptdashboard.js"></script>
+
+</body>
+
+</html>
