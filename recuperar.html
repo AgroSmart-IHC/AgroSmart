@@ -7,7 +7,7 @@
 
     <title>AgroSmart - Tu Cultivo, más inteligente</title>
 
-    <link rel="stylesheet" href="css/styleslogin.css">
+    <link rel="stylesheet" href="css/stylesrecuperar.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -39,7 +39,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+<section class="hero">
 
         <img src="imagenes/agricultor.png" alt="Agricultor" class="hero-img">
 
@@ -47,7 +47,6 @@
 
         <div class="hero-content">
 
-            <!-- Bloque Izquierdo: Mensaje de Bienvenida -->
             <div class="hero-text-content">
                 <div class="hero-text">
                     <h1>
@@ -62,11 +61,10 @@
                 </div>
             </div>
 
-            <!-- Bloque Derecho: Tarjeta de Login -->
             <div class="register-card-container">
                 <div class="register-card">
-                    <h2>Ingresa a AgroSmart</h2>
-                    <p class="subtitle">Gestiona tu fundo de manera inteligente</p>
+                    <h2>¿Olvidaste tu contraseña?</h2>
+                    <p class="subtitle">Ingresa tu correo y te enviaremos las instrucciones para restablecerla.</p>
 
                     <form>
                         <div class="form-group">
@@ -74,28 +72,10 @@
                             <input type="email" placeholder="juan.perez@email.com">
                         </div>
 
-                        <div class="form-group">
-                            <label>Contraseña *</label>
-                            <input type="password" placeholder="Ingresa tu contraseña">
-                        </div>
+                        <button type="button" class="btn-submit-register">Enviar Enlace de Recuperación</button>
 
-                        <!-- Recuperación de contraseña -->
-                        <div class="form-options">
-                            <a href="recuperar.html" class="form-link">¿Olvidaste tu contraseña?</a>
-                        </div>
-
-                            <button
-                                type="button"
-                                class="btn-submit-register"
-                                onclick="window.location.href='dashboard.html'">
-
-                                Iniciar Sesión
-
-                            </button>
-
-                        <!-- Enlace de retorno al registro -->
                         <div class="form-footer-redirect">
-                            <p>¿Aún no tienes una cuenta? <a href="registro.html" class="form-link-highlight">Regístrate aquí</a></p>
+                            <p>¿Recordaste tu contraseña? <a href="login.html" class="form-link-highlight">Regresar al Login</a></p>
                         </div>
                     </form>
                 </div>
