@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #222;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --verde: #45603F;
+    --verde-claro: #D9EB96;
+    --blanco: #FFFFFF;
+    --gris: #F4F4F4;
+    --texto: #222222;
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+
+header {
+    background: white;
+    width: 100%;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ====================================
+   HERO DASHBOARD
+==================================== */
+
+.hero-dashboard{
+    width:100%;
+    min-height:450px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+    background:
+    linear-gradient(
+        rgba(69,96,63,.65),
+        rgba(69,96,63,.40)
+    ),
+    url("../imagenes/bannersomos.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero-dashboard-content{
+    max-width:850px;
+}
+
+.hero-dashboard-content h1{
+    color:white;
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:20px;
+    text-shadow:0 3px 10px rgba(0,0,0,.25);
+}
+
+.hero-dashboard-content p{
+    color:white;
+    font-size:25px;
+    line-height:1.7;
+    font-weight:500;
+    max-width:750px;
+    margin:auto;
+}
+
+
+/* ====================================
+   BOTÓN
+==================================== */
+
+.btn-dashboard{
+    margin-top:35px;
+
+    border:none;
+    cursor:pointer;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    background:#45603F;
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-dashboard:hover{
+    background:#D9E9A0;
+    color:#45603F;
+}
+
+
+/* ====================================
+   MÉTRICAS
+==================================== */
+
+.metricas-section{
+    padding:80px 5%;
+}
+
+.metricas-section h2{
+    text-align:center;
+    color:#45603F;
+    font-size:2.2rem;
+    margin-bottom:40px;
+}
+
+.metricas-grid{
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.metrica-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.metrica-card h3{
+    color:#45603F;
+    margin-bottom:15px;
+}
+
+.metrica-card span{
+    display:block;
+
+    font-size:2.5rem;
+    font-weight:700;
+
+    color:#45603F;
+
+    margin-bottom:10px;
+}
+
+.metrica-card p{
+    color:#666;
+}
+
+
+/* ====================================
+   CLIMA + ALERTAS
+==================================== */
+
+.dashboard-info{
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:20px 5% 80px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+}
+
+.clima-card,
+.alertas-card{
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.clima-card h2,
+.alertas-card h2{
+    color:#45603F;
+    margin-bottom:25px;
+}
+
+.clima-principal{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin-bottom:25px;
+}
+
+.clima-principal img{
+    width:80px;
+}
+
+.clima-principal h3{
+    font-size:2rem;
+    color:#45603F;
+}
+
+.clima-detalles p{
+    margin-bottom:12px;
+    color:#555;
+}
+
+
+/* ====================================
+   ALERTAS
+==================================== */
+
+.alerta-item{
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    font-weight:500;
+}
+
+.alerta-roja{
+    background:#ffe8e8;
+}
+
+.alerta-amarilla{
+    background:#fff7db;
+}
+
+.alerta-verde{
+    background:#D9E9A0;
+}
+
+
+/* ====================================
+   CULTIVOS
+==================================== */
+
+.cultivos-section{
+    padding:20px 5% 80px;
+}
+
+.cultivos-section h2{
+    text-align:center;
+    color:#45603F;
+    font-size:2.2rem;
+    margin-bottom:40px;
+}
+
+.cultivos-grid{
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.cultivo-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.cultivo-card h3{
+    color:#45603F;
+    margin-bottom:15px;
+}
+
+.cultivo-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.estado{
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+.bueno{
+    background:#D9E9A0;
+    color:#45603F;
+}
+
+.atencion{
+    background:#fff7db;
+    color:#7c6400;
+}
+
+
+/* ====================================
+   ACCIONES
+==================================== */
+
+.acciones-section{
+    padding:20px 5% 80px;
+}
+
+.acciones-section h2{
+    text-align:center;
+    color:#45603F;
+    font-size:2.2rem;
+    margin-bottom:40px;
+}
+
+.acciones-grid{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.accion-card{
+    background:white;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.accion-card:hover{
+    background:#D9E9A0;
+}
+
+.accion-card h3{
+    color:#45603F;
+    margin-bottom:12px;
+}
+
+.accion-card p{
+    color:#666;
+}
+
+
+/* ====================================
+   INFORMACIÓN EXTRA
+==================================== */
+
+.dashboard-info-extra{
+    padding:0 5% 90px;
+}
+
+.dashboard-extra-card{
+    max-width:1200px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.dashboard-extra-card h2{
+    color:#45603F;
+    margin-bottom:20px;
+}
+
+.dashboard-extra-card p{
+    color:#555;
+    line-height:1.9;
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--verde);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.footer-col {
+    width: 300px;
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+.footer-redes {
+    width: 140px;      
+    max-width: 100%;   
+    height: auto;
+    margin-top: 15px;
+    display: block;
+}
+
+.footer-col h3 {
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    background: var(--verde);
+    color: white;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media (max-width:1100px){
+    .navbar {
+        width: 95%;
+        height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .metricas-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dashboard-info{
+        grid-template-columns:1fr;
+    }
+
+    .cultivos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .acciones-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-dashboard-content h1{
+        font-size:2.5rem;
+    }
+
+}
+
+@media (max-width:700px){
+
+    .hero-dashboard{
+        min-height:auto;
+        padding:100px 20px 70px;
+    }
+
+    .hero-dashboard-content h1{
+        font-size:2rem;
+    }
+
+    .hero-dashboard-content p{
+        font-size:1rem;
+    }
+
+    .metricas-grid{
+        grid-template-columns:1fr;
+    }
+
+    .clima-card,
+    .alertas-card,
+    .dashboard-extra-card{
+        padding:25px;
+    }
+
+}
