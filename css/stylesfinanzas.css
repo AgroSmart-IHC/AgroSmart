@@ -85,7 +85,7 @@ header {
 
 .hero-finanzas{
     width:100%;
-    min-height:420px;
+    min-height:450px;
 
     display:flex;
     justify-content:center;
@@ -97,10 +97,10 @@ header {
 
     background:
     linear-gradient(
-        rgba(69,96,63,.55),
-        rgba(216,233,160,.35)
+        rgba(69,96,63,.65),
+        rgba(69,96,63,.40)
     ),
-    url("../imagenes/agricultor.png");
+    url("../imagenes/bannersomos.png");
 
     background-size:cover;
     background-position:center;
@@ -108,20 +108,24 @@ header {
 }
 
 .hero-finanzas-content{
-    max-width:850px;
+    max-width:900px;
 }
 
 .hero-finanzas-content h1{
     color:white;
-    font-size:3.2rem;
+    font-size:4rem;
     font-weight:700;
     margin-bottom:20px;
+    text-shadow:0 3px 10px rgba(0,0,0,.25);
 }
 
 .hero-finanzas-content p{
     color:white;
-    font-size:1.15rem;
-    line-height:1.8;
+    font-size:25px;
+    line-height:1.7;
+    font-weight:500;
+    max-width:750px;
+    margin:auto;
 }
 
 /* ====================================
@@ -129,7 +133,8 @@ header {
 ==================================== */
 
 .info-roi{
-    padding:80px 5%;
+    padding:60px 5%;
+    background:#F8FAF8;
 }
 
 .info-roi-container{
@@ -140,38 +145,39 @@ header {
 
 .info-roi-container h2{
     color:#45603F;
-    font-size:2rem;
-    margin-bottom:20px;
+    font-size:2.4rem;
+    margin-bottom:15px;
 }
 
 .info-roi-container > p{
-    max-width:850px;
+    max-width:900px;
     margin:auto;
     line-height:1.8;
     color:#555;
+    font-size:1.05rem;
 }
-
 .tips-roi{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:40px;
+    gap:20px;
+    margin-top:35px;
 }
 
 .tip-card{
-    background:white;
+    background:#D9EB96;
     border-radius:20px;
-    padding:30px;
+    padding:25px;
     box-shadow:var(--sombra);
 }
 
 .tip-card h3{
     color:#45603F;
-    margin-bottom:15px;
+    margin-bottom:10px;
+    font-size:1.2rem;
 }
 
 .tip-card p{
-    color:#666;
+    color:#333;
     line-height:1.6;
 }
 
@@ -181,19 +187,18 @@ header {
 ==================================== */
 
 .roi-section{
-    padding:80px 20px;
+    padding:30px 20px 70px;
 }
 
 .roi-container{
     max-width:1000px;
-
     margin:auto;
 
     background:white;
 
     border-radius:25px;
 
-    padding:50px;
+    padding:40px;
 
     box-shadow:
     0 8px 30px rgba(0,0,0,.08);
@@ -201,21 +206,18 @@ header {
 
 .roi-container h2{
     text-align:center;
-
-    color:#45603f;
-
-    margin-bottom:15px;
-
-    font-size:2rem;
+    color:#45603F;
+    margin-bottom:10px;
+    font-size:2.2rem;
 }
 
 .roi-container p{
     text-align:center;
-
     color:#666;
-
-    margin-bottom:40px;
+    margin-bottom:30px;
+    font-size:1rem;
 }
+
 
 
 /* ====================================
@@ -245,56 +247,42 @@ header {
 }
 
 .input-group input{
-    padding:15px;
-
-    border:2px solid #e0e0e0;
-
+    padding:16px;
+    border:2px solid #D9EB96;
     border-radius:12px;
-
     font-size:1rem;
-
     transition:.3s;
 }
 
 .input-group input:focus{
     outline:none;
-
-    border-color:#45603f;
+    border-color:#45603F;
 }
 
-
-/* ====================================
-   BOTÓN
-==================================== */
 
 .btn-roi{
     display:block;
 
-    margin:40px auto 0;
+    margin:35px auto 0;
 
     border:none;
-
     cursor:pointer;
 
-    padding:16px 40px;
+    padding:16px 45px;
 
     border-radius:50px;
 
-    background:#45603f;
-
+    background:#45603F;
     color:white;
 
     font-size:1rem;
-
     font-weight:600;
 
     transition:.3s;
 }
 
 .btn-roi:hover{
-    transform:translateY(-3px);
-
-    background:#45603f;
+    opacity:.9;
 }
 
 
@@ -303,17 +291,14 @@ header {
 ==================================== */
 
 .resultado-section{
-    padding:20px 20px 100px;
+    padding:0 20px 80px;
 }
 
 .titulo-resultados{
     text-align:center;
-
-    color:#45603f;
-
-    margin-bottom:40px;
-
-    font-size:2rem;
+    color:#45603F;
+    margin-bottom:30px;
+    font-size:2.2rem;
 }
 
 .resultado-container{
@@ -323,65 +308,22 @@ header {
 
     display:grid;
 
-    grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
-    gap:25px;
+    gap:20px;
 }
 
-.resultado-card{
-    background:white;
-
-    border-radius:20px;
-
-    padding:35px 25px;
-
-    text-align:center;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.08);
-}
-
-.resultado-card h3{
-    color:#555;
-
-    margin-bottom:15px;
-
-    font-size:1rem;
-}
-
-.resultado-card span{
-    color:#45603f;
-
-    font-size:2rem;
-
-    font-weight:700;
-}
-
-.roi-card{
-    background:#45603F;
-    transform:scale(1.05);
-}
-
-.roi-card h3{
-    color:white;
-}
-
-.roi-card span{
-    color:white;
-}
 
 /* ====================================
    MENSAJE ROI
 ==================================== */
-
 .mensaje-roi{
     max-width:900px;
-    margin:40px auto 0;
+    margin:30px auto 0;
 
-    background:white;
+    background:#D9EB96;
 
-    padding:30px;
+    padding:25px;
 
     border-radius:20px;
 
@@ -392,12 +334,55 @@ header {
 
 .mensaje-roi h3{
     color:#45603F;
-    margin-bottom:15px;
+    margin-bottom:10px;
+    font-size:1.3rem;
 }
 
 .mensaje-roi p{
-    color:#555;
+    color:#333;
     line-height:1.8;
+}
+
+.ayuda-finanzas{
+    margin-top:15px;
+    text-align:center;
+    color:#666;
+    font-size:.95rem;
+    line-height:1.7;
+}
+.resultado-card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+}
+
+.resultado-card h3{
+    color:#555;
+    margin-bottom:10px;
+    font-size:1rem;
+}
+
+.resultado-card span{
+    color:#45603F;
+    font-size:2.2rem;
+    font-weight:700;
+}
+
+.roi-card{
+    background:#45603F;
+    transform:scale(1.05);
+}
+
+.roi-card h3,
+.roi-card span{
+    color:white;
 }
 .ayuda-finanzas{
     margin-top:20px;
