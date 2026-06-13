@@ -445,13 +445,20 @@ header {
     padding-bottom: 50px; 
 }
 
-.servicio-card {
-    background: white;
-    border-radius: 20px;
-    box-shadow: var(--sombra);
-    padding: 25px;
-    text-align: left; 
-    transition: .3s;
+ /*modivique esto*/
+.servicio-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+    padding:25px;
+
+    text-align:left;
+
+    transition:.3s;
 }
 
 .servicio-card img {
@@ -1208,4 +1215,7 @@ footer {
         margin: 15px auto 0;
         display: block;
     }
+
+    
 }
+

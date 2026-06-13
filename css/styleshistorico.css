@@ -1,0 +1,193 @@
+.historico-page{
+
+    width:90%;
+    margin:auto;
+    text-align:center;
+    padding:60px 0;
+}
+
+.historico-page h4{
+
+    color:#a7c957;
+}
+
+.historico-page h1{
+
+    color:#45603F;
+    font-size:48px;
+}
+
+.filtro-box,
+.grafico-box,
+.mensaje-box{
+
+    width:90%;
+    margin:30px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.filtro-box select{
+
+    padding:12px;
+
+    border-radius:10px;
+}
+
+.grafico{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:40px;
+
+    height:300px;
+}
+
+.barra{
+
+    width:90px;
+
+    background:#45603F;
+
+    border-radius:15px 15px 0 0;
+
+    position:relative;
+}
+
+.barra span{
+
+    position:absolute;
+
+    bottom:-30px;
+
+    left:20px;
+}
+
+.barra1{
+
+    height:140px;
+}
+
+.barra2{
+
+    height:210px;
+}
+
+.barra3{
+
+    height:270px;
+
+    background:#a7c957;
+}
+
+.resumen-grid{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.resumen-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.warning{
+
+    border-left:6px solid orange;
+}
+
+.error{
+
+    border-left:6px solid red;
+}
+
+.error input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin:15px 0;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+}
+
+@media(max-width:768px){
+
+    .resumen-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .grafico{
+
+        gap:15px;
+    }
+
+}
+
+.servicio-card{
+
+    min-height: 450px !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+}
+
+.servicio-card p{
+
+    margin-bottom: 30px !important;
+}
+
+.servicio-card .btn-plan-verde{
+
+    margin-top: auto !important;
+
+    width: 100%;
+
+    text-align: center;
+
+    display: block;
+}
+
+.filtro-metrica{
+
+    width:90%;
+
+    margin:30px auto;
+
+}
+
+.filtro-metrica .historico-card{
+
+    max-width:350px;
+
+}
