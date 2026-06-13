@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Reportes Financieros</title>
+
+    <link rel="stylesheet"
+          href="css/styles.css">
+
+    <link rel="stylesheet"
+          href="css/stylesreportes.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="inicio.html">
+
+                    <img src="imagenes/logo.png"
+                         alt="AgroSmart">
+
+                </a>
+
+            </div>
+
+            <ul class="menu">
+
+                <li><a href="servicios.html">Servicios</a></li>
+
+                <li><a href="planes.html">Planes</a></li>
+
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+
+                <li>
+
+                    <a href="#contacto"
+                       class="btn-contacto">
+
+                        Contáctanos
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <section class="reportes-page">
+
+    <div class="reportes-header">
+
+        <div>
+
+            <h4 class="subtitulo-verde">
+                REPORTES FINANCIEROS
+            </h4>
+
+            <h1 class="titulo-principal">
+                Exportación de Reportes Financieros
+            </h1>
+
+            <p>
+                Selecciona el período de tiempo y exporta tu balance
+                de ganancias y pérdidas en formato PDF.
+            </p>
+
+        </div>
+
+        
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SELECTOR
+========================= -->
+
+<div class="reporte-selector">
+
+    <div class="selector-card">
+
+        <h3>Periodo del reporte</h3>
+
+        <select id="periodo">
+
+            <option value="">
+                Seleccione un periodo
+            </option>
+
+            <option value="2026-1">
+                Enero 2026 - Marzo 2026
+            </option>
+
+            <option value="2026-2">
+                Abril 2026 - Junio 2026
+            </option>
+
+            <option value="2026-3">
+                Julio 2026 - Septiembre 2026
+            </option>
+
+        </select>
+
+    </div>
+
+    <button class="btn-plan-verde"
+            onclick="exportarReporte()">
+
+        Exportar PDF
+
+    </button>
+
+</div>
+
+<div id="mensajeReporte"></div> 
+
+<!-- =========================
+     RESUMEN FINANCIERO
+========================= -->
+
+<section class="finanzas-grid">
+
+    <div class="finanza-card">
+
+        <h3>Ingresos Totales</h3>
+
+        <h2 class="verde">
+            S/. 24,500
+        </h2>
+
+    </div>
+
+    <div class="finanza-card">
+
+        <h3>Gastos Totales</h3>
+
+        <h2 class="rojo">
+            S/. 12,000
+        </h2>
+
+    </div>
+
+    <div class="finanza-card">
+
+        <h3>Utilidad Neta</h3>
+
+        <h2 class="verde">
+            S/. 12,500
+        </h2>
+
+    </div>
+
+    <div class="finanza-card">
+
+        <h3>Margen de Utilidad</h3>
+
+        <h2 class="verde">
+            51%
+        </h2>
+
+    </div>
+
+</section>
+
+<div id="mensajeReporte"></div>
+
+
+    
+
+    
+
+    <!-- FOOTER -->
+
+    <footer id="contacto">
+
+        <div class="footer-col">
+
+            <img src="imagenes/logo.png"
+                 class="footer-logo"
+                 alt="AgroSmart">
+
+            <p>
+
+                Tecnología y crecimiento al
+                servicio del campo.
+
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Navegación</h3>
+
+            <a href="inicio.html">Inicio</a>
+
+            <a href="servicios.html">Servicios</a>
+
+            <a href="planes.html">Planes</a>
+
+            <a href="quienesSomos.html">
+                Quienes Somos
+            </a>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Contacto</h3>
+
+            <p>info@agrosmart.com</p>
+
+            <p>+51 999 999 999</p>
+
+            <p>Lima, Perú</p>
+
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+
+        ©2026 AgroSmart.
+        Todos los derechos reservados.
+
+    </div>
+
+    <script>
+
+    function exportarReporte(){
+
+        let periodo =
+        document.getElementById("periodo").value;
+
+        let contenedor =
+        document.getElementById("mensajeReporte");
+
+
+        /* No seleccionó periodo */
+
+        if(periodo === ""){
+
+            contenedor.innerHTML = `
+
+            <div class="escenario-card advertencia">
+
+                <h2>Reporte vacío</h2>
+
+                <p>
+                    No existen ingresos ni gastos
+                    registrados para el período seleccionado.
+                </p>
+
+                <button class="btn-bloqueado">
+
+                    No se puede exportar
+
+                </button>
+
+            </div>
+
+            `;
+
+            return;
+        }
+
+
+    
+
+        if(periodo === "2026-3"){
+
+            contenedor.innerHTML = `
+
+            <div class="escenario-card error">
+
+                <h2>Fallo en la generación</h2>
+
+                <p>
+                    Error interno del servidor. No existe datos registrados.
+                    Intente nuevamente en 1 minuto.
+                </p>
+
+                <button class="btn-error">
+
+                    Reintentar
+
+                </button>
+
+            </div>
+
+            `;
+
+            return;
+        }
+
+
+        contenedor.innerHTML = `
+
+        <div class="escenario-card exito">
+
+            <div class="escenario-grid">
+
+                <div>
+
+                    <h2>
+                        PDF generado correctamente
+                    </h2>
+
+                    <p>
+                        El sistema generó un PDF que
+                        incluye el logo del fundo y
+                        la tipografía Roca Two.
+                    </p>
+
+                    <button class="btn-plan-verde">
+
+                        Descargar PDF
+
+                    </button>
+
+                </div>
+
+                <div class="pdf-preview">
+
+                    <h2>FUNDO SANTA MARÍA</h2>
+
+                    <p>
+                        Balance de ganancias y pérdidas
+                    </p>
+
+                    <hr>
+
+                    <p>Ingresos Totales: S/. 24,500</p>
+                    <p>Gastos Totales: S/. 12,000</p>
+                    <p>Utilidad Neta: S/. 12,500</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+
+}
+
+</script>
+
+</body>
+
+
+</html>
