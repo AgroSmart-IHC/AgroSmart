@@ -1,129 +1,448 @@
-const btnActualizar =
-    document.getElementById("btnActualizar");
+/* =========================
+   DASHBOARD AGROSMART
+========================= */
 
-btnActualizar.addEventListener("click", () => {
+/* =========================
+   ALERTAS DISPONIBLES
+========================= */
 
-    /* =========================
-       MÉTRICAS
-    ========================= */
+const alertasDisponibles = [
 
-    const cultivos =
-        Math.floor(Math.random() * 8) + 5;
+    {
+        texto: "⚠ Posible lluvia intensa en las próximas 24 horas",
+        tipo: "clima",
+        riesgo: "alto",
+        clase: "alerta-roja"
+    },
 
-    const alertas =
-        Math.floor(Math.random() * 5) + 1;
+    {
+        texto: "⚠ Incremento de vientos en la zona",
+        tipo: "clima",
+        riesgo: "medio",
+        clase: "alerta-amarilla"
+    },
 
-    const produccion =
-        Math.floor(Math.random() * 15) + 8;
+    {
+        texto: "⚠ Temperatura estable durante el día",
+        tipo: "clima",
+        riesgo: "bajo",
+        clase: "alerta-verde"
+    },
 
-    const rentabilidad =
-        Math.floor(Math.random() * 40) + 30;
+    {
+        texto: "⚠ Posible infestación de pulgones",
+        tipo: "plagas",
+        riesgo: "alto",
+        clase: "alerta-roja"
+    },
 
-    document.getElementById("cultivosActivos").textContent =
-        cultivos;
+    {
+        texto: "⚠ Riesgo moderado de plagas detectado",
+        tipo: "plagas",
+        riesgo: "medio",
+        clase: "alerta-amarilla"
+    },
 
-    document.getElementById("alertasActivas").textContent =
-        alertas;
+    {
+        texto: "⚠ Monitoreo preventivo recomendado",
+        tipo: "plagas",
+        riesgo: "bajo",
+        clase: "alerta-verde"
+    },
 
-    document.getElementById("produccionEstimada").textContent =
-        produccion + " Tn";
+    {
+        texto: "⚠ Déficit hídrico detectado",
+        tipo: "riego",
+        riesgo: "alto",
+        clase: "alerta-roja"
+    },
 
-    document.getElementById("rentabilidadPromedio").textContent =
-        rentabilidad + "%";
+    {
+        texto: "⚠ Revisar humedad del terreno",
+        tipo: "riego",
+        riesgo: "medio",
+        clase: "alerta-amarilla"
+    },
 
+    {
+        texto: "⚠ Se recomienda riego preventivo esta mañana",
+        tipo: "riego",
+        riesgo: "bajo",
+        clase: "alerta-verde"
+    },
 
-    /* =========================
-       CLIMA
-    ========================= */
+    {
+        texto: "⚠ Inventario crítico de fertilizantes",
+        tipo: "inventario",
+        riesgo: "alto",
+        clase: "alerta-roja"
+    },
 
-    const climas = [
+    {
+        texto: "⚠ Stock bajo de pesticidas",
+        tipo: "inventario",
+        riesgo: "medio",
+        clase: "alerta-amarilla"
+    },
 
-        {
-            icono: "imagenes/sol.png",
-            temperatura: "29°C",
-            estado: "Soleado",
-            humedad: "💧 Humedad: 62%",
-            lluvia: "🌧 Prob. lluvia: 10%",
-            viento: "💨 Viento: 14 km/h"
-        },
+    {
+        texto: "⚠ Inventario suficiente para la próxima semana",
+        tipo: "inventario",
+        riesgo: "bajo",
+        clase: "alerta-verde"
+    }
 
-        {
-            icono: "imagenes/nublado.png",
-            temperatura: "22°C",
-            estado: "Nublado",
-            humedad: "💧 Humedad: 74%",
-            lluvia: "🌧 Prob. lluvia: 35%",
-            viento: "💨 Viento: 11 km/h"
-        },
+];
 
-        {
-            icono: "imagenes/lluviainicio.png",
-            temperatura: "19°C",
-            estado: "Lluvias",
-            humedad: "💧 Humedad: 88%",
-            lluvia: "🌧 Prob. lluvia: 80%",
-            viento: "💨 Viento: 18 km/h"
+/* =========================
+   ELEMENTOS GENERALES
+========================= */
+
+const btnActualizar = document.getElementById("btnActualizar");
+
+/* =========================
+   ACTUALIZAR DASHBOARD
+========================= */
+
+if (btnActualizar) {
+
+    btnActualizar.addEventListener("click", () => {
+
+        /* =========================
+           MÉTRICAS
+        ========================= */
+
+        const cultivos = Math.floor(Math.random() * 8) + 5;
+        const alertas = Math.floor(Math.random() * 5) + 1;
+        const produccion = Math.floor(Math.random() * 15) + 8;
+        const rentabilidad = Math.floor(Math.random() * 40) + 30;
+
+        document.getElementById("cultivosActivos").textContent = cultivos;
+        document.getElementById("alertasActivas").textContent = alertas;
+        document.getElementById("produccionEstimada").textContent = produccion + " Tn";
+        document.getElementById("rentabilidadPromedio").textContent = rentabilidad + "%";
+
+        /* =========================
+           CLIMA
+        ========================= */
+
+        const climas = [
+
+            {
+                icono: "imagenes/sol.png",
+                temperatura: "29°C",
+                estado: "Soleado",
+                humedad: "💧 Humedad: 62%",
+                lluvia: "🌧 Prob. lluvia: 10%",
+                viento: "💨 Viento: 14 km/h"
+            },
+
+            {
+                icono: "imagenes/nublado.png",
+                temperatura: "22°C",
+                estado: "Nublado",
+                humedad: "💧 Humedad: 74%",
+                lluvia: "🌧 Prob. lluvia: 35%",
+                viento: "💨 Viento: 11 km/h"
+            },
+
+            {
+                icono: "imagenes/lluviainicio.png",
+                temperatura: "19°C",
+                estado: "Lluvias",
+                humedad: "💧 Humedad: 88%",
+                lluvia: "🌧 Prob. lluvia: 80%",
+                viento: "💨 Viento: 18 km/h"
+            }
+
+        ];
+
+        const climaSeleccionado =
+            climas[Math.floor(Math.random() * climas.length)];
+
+        document.getElementById("iconoClima").src =
+            climaSeleccionado.icono;
+
+        document.getElementById("temperaturaClima").textContent =
+            climaSeleccionado.temperatura;
+
+        document.getElementById("estadoClima").textContent =
+            climaSeleccionado.estado;
+
+        document.getElementById("humedadClima").textContent =
+            climaSeleccionado.humedad;
+
+        document.getElementById("lluviaClima").textContent =
+            climaSeleccionado.lluvia;
+
+        document.getElementById("vientoClima").textContent =
+            climaSeleccionado.viento;
+
+        /* =========================
+           ALERTAS DINÁMICAS
+        ========================= */
+
+        const alertasAleatorias =
+            [...alertasDisponibles]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3);
+
+        alertasAleatorias.forEach((alerta, index) => {
+
+            const elemento =
+                document.getElementById(`alerta${index + 1}`);
+
+            if (!elemento) return;
+
+            elemento.textContent = alerta.texto;
+
+            elemento.dataset.tipo = alerta.tipo;
+            elemento.dataset.riesgo = alerta.riesgo;
+
+            elemento.className =
+                `alerta-item ${alerta.clase}`;
+        });
+
+        aplicarFiltros();
+
+    });
+
+}
+
+/* =========================
+   US50 - FILTRO ALERTAS
+========================= */
+
+const filtroBtns =
+    document.querySelectorAll(".filtro-btn");
+
+const riesgoBtns =
+    document.querySelectorAll(".riesgo-btn");
+
+const alertasItems =
+    document.querySelectorAll(".alerta-item");
+
+let filtroTipo = "todos";
+let filtroRiesgo = "todos";
+
+filtroBtns.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        filtroBtns.forEach(b =>
+            b.classList.remove("activo")
+        );
+
+        btn.classList.add("activo");
+
+        filtroTipo = btn.dataset.tipo;
+
+        aplicarFiltros();
+
+    });
+
+});
+
+riesgoBtns.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        riesgoBtns.forEach(b =>
+            b.classList.remove("activo")
+        );
+
+        btn.classList.add("activo");
+
+        filtroRiesgo = btn.dataset.riesgo;
+
+        aplicarFiltros();
+
+    });
+
+});
+
+function aplicarFiltros() {
+
+    const alertasItems =
+        document.querySelectorAll(".alerta-item");
+
+    const mensajeSinAlertas =
+        document.getElementById("sinAlertas");
+
+    let alertasVisibles = 0;
+
+    alertasItems.forEach(alerta => {
+
+        const tipo = alerta.dataset.tipo;
+        const riesgo = alerta.dataset.riesgo;
+
+        let mostrar = true;
+
+        if (
+            filtroTipo !== "todos" &&
+            tipo !== filtroTipo
+        ) {
+            mostrar = false;
         }
 
-    ];
+        if (
+            filtroRiesgo !== "todos" &&
+            riesgo !== filtroRiesgo
+        ) {
+            mostrar = false;
+        }
 
-    const climaSeleccionado =
-        climas[Math.floor(Math.random() * climas.length)];
+        alerta.style.display =
+            mostrar ? "block" : "none";
 
-    document.getElementById("iconoClima").src =
-        climaSeleccionado.icono;
+        if (mostrar) {
+            alertasVisibles++;
+        }
 
-    document.getElementById("temperaturaClima").textContent =
-        climaSeleccionado.temperatura;
+    });
 
-    document.getElementById("estadoClima").textContent =
-        climaSeleccionado.estado;
+    if (mensajeSinAlertas) {
 
-    document.getElementById("humedadClima").textContent =
-        climaSeleccionado.humedad;
+        mensajeSinAlertas.style.display =
+            alertasVisibles === 0
+                ? "block"
+                : "none";
+    }
 
-    document.getElementById("lluviaClima").textContent =
-        climaSeleccionado.lluvia;
-
-    document.getElementById("vientoClima").textContent =
-        climaSeleccionado.viento;
+}
 
 
-    /* =========================
-       ALERTAS
-    ========================= */
+const inputImagen =
+    document.getElementById("imagenPlaga");
 
-    const alertasDisponibles = [
+const previewImagen =
+    document.getElementById("previewPlaga");
 
-        "⚠ Posible lluvia intensa en las próximas 24 horas",
+const btnIA =
+    document.getElementById("btnAnalizarPlaga");
 
-        "⚠ Riesgo moderado de plagas detectado",
+const resultadoIA =
+    document.getElementById("resultadoIA");
 
-        "⚠ Se recomienda riego preventivo esta mañana",
+/* =========================
+   VISTA PREVIA DE IMAGEN
+========================= */
 
-        "⚠ Temperatura elevada durante la tarde",
+if (inputImagen) {
 
-        "⚠ Revisar humedad del terreno",
+    inputImagen.addEventListener("change", (e) => {
 
-        "⚠ Incremento de vientos en la zona",
+        const archivo = e.target.files[0];
 
-        "⚠ Condiciones favorables para enfermedades fúngicas"
+        if (!archivo) return;
 
-    ];
+        const lector = new FileReader();
 
-    document.getElementById("alerta1").textContent =
-        alertasDisponibles[
-            Math.floor(Math.random() * alertasDisponibles.length)
-        ];
+        lector.onload = function (evento) {
 
-    document.getElementById("alerta2").textContent =
-        alertasDisponibles[
-            Math.floor(Math.random() * alertasDisponibles.length)
-        ];
+            previewImagen.src =
+                evento.target.result;
 
-    document.getElementById("alerta3").textContent =
-        alertasDisponibles[
-            Math.floor(Math.random() * alertasDisponibles.length)
-        ];
+        };
+
+        lector.readAsDataURL(archivo);
+
+    });
+
+}
+
+/* =========================
+   RESULTADOS IA
+========================= */
+
+const resultadosIA = [
+
+    "🟢 No se detectaron plagas. Cultivo en excelente estado.",
+
+    "🟢 Cultivo saludable. No se observan anomalías.",
+
+    "🟢 Desarrollo normal. Sin indicios de infestación.",
+
+    "🟡 Posible presencia de pulgones en etapa inicial.",
+
+    "🟡 Riesgo moderado de insectos en hojas jóvenes.",
+
+    "🟡 Se recomienda monitoreo preventivo durante la semana.",
+
+    "🟠 Posible presencia de hongos por exceso de humedad.",
+
+    "🟠 Se detectan patrones compatibles con estrés vegetal.",
+
+    "🟠 Riesgo medio de propagación de plagas.",
+
+    "🔴 Alta probabilidad de infestación detectada.",
+
+    "🔴 Posibles daños severos en hojas y tallos.",
+
+    "🔴 Se recomienda intervención inmediata del cultivo."
+
+];
+
+/* =========================
+   ANALIZAR IMAGEN
+========================= */
+
+if (btnIA) {
+
+    btnIA.addEventListener("click", () => {
+
+        if (!inputImagen.files.length) {
+
+            resultadoIA.textContent =
+                "⚠ Primero selecciona una imagen.";
+
+            return;
+        }
+
+        resultadoIA.textContent =
+            "🔎 Analizando imagen del cultivo...";
+
+        setTimeout(() => {
+
+            const resultado =
+                resultadosIA[
+                    Math.floor(
+                        Math.random() *
+                        resultadosIA.length
+                    )
+                ];
+
+            resultadoIA.textContent =
+                resultado;
+
+        }, 2000);
+
+    });
+
+}
+/* =========================
+   US13 - RECEPCIÓN DE ALERTA
+========================= */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const notificacion =
+        document.getElementById("notificacionClima");
+
+    if (notificacion) {
+
+        setTimeout(() => {
+            notificacion.classList.remove("hidden");
+        }, 1000);
+
+        setTimeout(() => {
+            notificacion.classList.add("hidden");
+        }, 5000);
+
+    }
+
+    if (btnActualizar) {
+        btnActualizar.click();
+    }
 
 });

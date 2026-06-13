@@ -181,22 +181,31 @@ header {
     color:#666;
 }
 
-
+.sin-alertas{
+    display:none;
+    margin-top:15px;
+    padding:18px;
+    border-radius:15px;
+    text-align:center;
+    background:#F4F4F4;
+    color:#666;
+    font-weight:500;
+}
 /* ====================================
    CLIMA + ALERTAS
 ==================================== */
 
 .dashboard-info{
     max-width:1300px;
-
     margin:auto;
-
     padding:20px 5% 80px;
 
     display:grid;
     grid-template-columns:1fr 1fr;
 
     gap:30px;
+
+    align-items:start;
 }
 
 .clima-card,
@@ -238,7 +247,45 @@ header {
     color:#555;
 }
 
+/* =========================
+   SUBIR IMAGEN IA
+========================= */
 
+.subir-imagen-btn{
+    display:inline-block;
+    background:#D9E9A0;
+    color:#45603F;
+    padding:12px 25px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.preview-container{
+    width:100%;
+    max-width:400px;
+    height:250px;
+
+    margin:0 auto 20px;
+
+    border:2px dashed #D9E9A0;
+    border-radius:20px;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#f8f8f8;
+}
+
+#previewPlaga{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+}
 /* ====================================
    ALERTAS
 ==================================== */
@@ -265,7 +312,123 @@ header {
     background:#D9E9A0;
 }
 
+.filtro-alertas{
+    margin-bottom:25px;
+    padding:20px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
 
+.filtro-alertas h3{
+    color:#45603F;
+    margin-bottom:15px;
+}
+
+.filtros-botones,
+.filtros-riesgo{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:15px;
+    align-items:center;
+}
+
+/* =========================
+   BOTONES SIMPLES
+========================= */
+
+.filtro-btn,
+.riesgo-btn{
+    border:none;
+    padding:10px 16px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:600;
+    background:#F4F4F4;
+    color:#45603F;
+}
+
+/* =========================
+   ACTIVO (CLAVE)
+========================= */
+
+.filtro-btn.activo,
+.riesgo-btn.activo{
+    background:#d9e9a0;
+}
+
+/* =========================
+   ALERTAS
+========================= */
+
+.alerta-item{
+    transition: all .25s ease;
+    will-change: transform, opacity;
+}
+
+/* oculto (compatible JS) */
+.oculto{
+    display:none !important;
+    opacity:0;
+    transform:scale(0.98);
+}
+
+/* =========================
+   IA PLAGAS
+========================= */
+
+.ia-plagas-section{
+    padding:20px 5% 80px;
+    text-align:center;
+}
+
+.ia-plagas-section h2{
+    color:#45603F;
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+.ia-plagas-section p{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.ia-box{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.btn-ia{
+    background:#45603F;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.btn-ia:hover{
+    background:#D9E9A0;
+    color:#45603F;
+    transform:translateY(-2px);
+}
+
+.resultado-ia{
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+    background:#F4F4F4;
+    color:#333;
+    font-weight:500;
+    min-height:60px;
+}
 /* ====================================
    CULTIVOS
 ==================================== */
@@ -478,6 +641,24 @@ footer {
     text-align: center;
     padding-bottom: 15px;
 }
+.notificacion {
+    position: fixed;
+    top: 4%;
+    right: 40px;
+    background: #e74c3c;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
 
 /* ====================================
    RESPONSIVE
@@ -494,6 +675,20 @@ footer {
     .footer-col{
         width:100%;
         max-width:400px;
+    }
+        .notificacion {
+        top: 12px;
+        right: 15px;
+
+        font-size: 18px;   
+        padding: 14px 16px;
+
+        width: auto;
+        max-width: 80%;   
+
+        border-radius: 10px;
+
+        box-shadow: 0 6px 15px rgba(0,0,0,0.25);
     }
 
     .navbar {
