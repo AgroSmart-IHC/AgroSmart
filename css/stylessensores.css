@@ -1,0 +1,297 @@
+/* =========================
+   GENERAL
+========================= */
+
+body{
+    background:#f5f6f8;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   TITULO
+========================= */
+
+.sensores-page{
+
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+.subtitulo-verde{
+
+    color:#2f8f57;
+    font-size:18px;
+    font-weight:600;
+}
+
+.titulo-principal{
+
+    color:#222;
+    font-size:42px;
+    margin:10px 0;
+}
+
+/* =========================
+   NOTIFICACIONES
+========================= */
+
+.notificaciones-box{
+
+    width:90%;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.alerta-roja{
+
+    color:#dc3545;
+    margin-top:15px;
+    font-weight:600;
+}
+
+.alerta-amarilla{
+
+    color:#f0a500;
+    margin-top:10px;
+    font-weight:600;
+}
+
+/* =========================
+   FILTRO
+========================= */
+
+.filtro-bateria{
+
+    width:90%;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.filtro-bateria select{
+
+    padding:10px 15px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.sensores-grid{
+
+    width:90%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+    padding-bottom:40px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.sensor-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.sensor-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.sensor-card h3{
+
+    color:#222;
+    margin-bottom:10px;
+}
+
+.sensor-card p{
+
+    color:#666;
+}
+
+/* =========================
+   PORCENTAJES
+========================= */
+
+.porcentaje{
+
+    font-size:42px;
+    font-weight:700;
+    margin:20px 0;
+}
+
+.verde{
+
+    color:#28a745;
+}
+
+.amarillo{
+
+    color:#f0a500;
+}
+
+.rojo{
+
+    color:#dc3545;
+}
+
+.gris{
+
+    color:#999;
+}
+
+/* =========================
+   ESTADOS
+========================= */
+
+.estado{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.bueno{
+
+    background:#dff5e5;
+    color:#28a745;
+}
+
+.normal{
+
+    background:#fff4d1;
+    color:#d89a00;
+}
+
+.bajo{
+
+    background:#fff4d1;
+    color:#d89a00;
+}
+
+.critica-texto{
+
+    background:#ffe0e0;
+    color:#dc3545;
+}
+
+.sinconexion{
+
+    background:#eeeeee;
+    color:#666;
+}
+
+/* =========================
+   TARJETA CRITICA
+========================= */
+
+.critica{
+
+    border:2px solid #dc3545;
+}
+
+/* =========================
+   TARJETA DESCONECTADA
+========================= */
+
+.desconectado{
+
+    background:#f2f2f2;
+}
+
+/* =========================
+   AUTONOMIA
+========================= */
+
+.autonomia{
+
+    text-align:center;
+}
+
+.autonomia h2{
+
+    color:#2f8f57;
+    font-size:45px;
+    margin:15px 0;
+}
+
+/* =========================
+   CONSEJO
+========================= */
+
+.consejo-box{
+
+    width:90%;
+    margin:auto;
+    margin-bottom:50px;
+
+    background:#e8f5e9;
+
+    color:#2f8f57;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    font-weight:500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .sensores-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sensores-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .titulo-principal{
+
+        font-size:32px;
+    }
+
+}
