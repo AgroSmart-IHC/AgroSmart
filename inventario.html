@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AgroSmart - Inventario de Insumos</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesinventario.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <a href="inicio.html">
+                <img src="imagenes/logo.png" alt="AgroSmart">
+            </a>
+
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="finanzas.html">Finanzas</a></li>
+
+            <li>
+                <a href="#contacto" class="btn-contacto">
+                    Contáctanos
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html" class="user-btn">
+                    <img src="imagenes/user.png" alt="Usuario">
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- TÍTULO -->
+
+<section class="inventario-page">
+
+    <h4 class="subtitulo-verde">
+        INVENTARIO AGRÍCOLA
+    </h4>
+
+    <h1 class="titulo-principal">
+        Control de Inventario de Insumos
+    </h1>
+
+    <p>
+        Gestiona fertilizantes y pesticidas,
+        controla el stock disponible y recibe alertas
+        automáticas para evitar desabastecimientos.
+    </p>
+
+</section>
+
+
+<!-- REGISTRAR COMPRA Y SALIDA -->
+
+<section class="inventario-grid">
+
+    <!-- COMPRA -->
+
+    <div class="inventario-card">
+
+        <h3>Registrar Compra</h3>
+
+        <div class="form-grid">
+
+            <input
+                id="nombreInsumo"
+                type="text"
+                placeholder="Nombre del insumo">
+
+            <input
+                id="marcaInsumo"
+                type="text"
+                placeholder="Marca">
+
+            <input
+                id="cantidadCompra"
+                type="number"
+                placeholder="Cantidad">
+
+            <input
+                id="precioCompra"
+                type="number"
+                placeholder="Precio unitario">
+
+            <input
+                id="fechaVencimiento"
+                type="date">
+
+        </div>
+
+        <button
+            id="btnCompra"
+            class="btn-plan-verde">
+
+            Registrar Compra
+
+        </button>
+
+        <div
+            id="mensajeCompra"
+            class="mensaje-exito"
+            style="display:none;">
+
+        </div>
+
+    </div>
+
+
+    <!-- SALIDA -->
+
+    <div class="inventario-card">
+
+        <h3>Registrar Salida</h3>
+
+        <select id="insumoSalida">
+
+        </select>
+
+        <input
+            id="cantidadSalida"
+            type="number"
+            placeholder="Cantidad a retirar">
+
+        <button
+            id="btnSalida"
+            class="btn-plan-verde">
+
+            Registrar Salida
+
+        </button>
+
+        <div
+            id="mensajeSalida"
+            class="mensaje-error"
+            style="display:none;">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STOCK MÍNIMO -->
+
+<section class="inventario-grid">
+
+    <div class="inventario-card">
+
+        <h3>Configurar Stock Mínimo</h3>
+
+        <select id="insumoMinimo">
+
+        </select>
+
+        <input
+            id="stockMinimo"
+            type="number"
+            placeholder="Umbral mínimo">
+
+        <button
+            id="btnMinimo"
+            class="btn-plan-verde">
+
+            Guardar Configuración
+
+        </button>
+
+        <div
+            id="mensajeMinimo"
+            class="mensaje-warning"
+            style="display:none;">
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTIFICACIONES -->
+
+    <div class="inventario-card">
+
+        <h3>Notificaciones</h3>
+
+        <div id="notificaciones">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TABLA -->
+
+<section class="tabla-section">
+
+    <h2>Inventario Actual</h2>
+
+    <table class="tabla-inventario">
+
+        <thead>
+
+            <tr>
+
+                <th>Insumo</th>
+                <th>Marca</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Vencimiento</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tablaInventario">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!-- ALERTA DE CADUCIDAD -->
+
+<section class="alerta-vencimiento">
+
+    <h2>Alerta de Caducidad</h2>
+
+    <div
+        id="alertaCaducidad"
+        class="mensaje-critico">
+
+        No existen productos vencidos.
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contacto">
+
+    <div class="footer-col">
+
+        <img src="imagenes/logo.png"
+             class="footer-logo"
+             alt="AgroSmart">
+
+        <p>
+            Tecnología y crecimiento al servicio del campo.
+        </p>
+
+    </div>
+
+    <div class="footer-col">
+
+        <h3>Navegación</h3>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="finanzas.html">Finanzas</a>
+        <a href="servicios.html">Servicios</a>
+
+    </div>
+
+    <div class="footer-col">
+
+        <h3>Contacto</h3>
+
+        <p>info@agrosmart.com</p>
+        <p>+51 999 999 999</p>
+        <p>Lima, Perú</p>
+
+    </div>
+
+</footer>
+
+<div class="copyright">
+    © 2026 AgroSmart. Todos los derechos reservados.
+</div>
+
+<script src="js/scriptinventario.js"></script>
+
+</body>
+
+</html>
