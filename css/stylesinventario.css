@@ -1,0 +1,251 @@
+/* =========================
+   HERO
+========================= */
+
+.inventario-page{
+    text-align:center;
+    padding:60px 20px 40px;
+}
+
+.inventario-page h4{
+    color:#c8db85;
+    font-size:1.5rem;
+    font-weight:600;
+}
+
+.inventario-page h1{
+    font-size:3rem;
+    color:#466942;
+    margin:10px 0;
+}
+
+.inventario-page p{
+    max-width:800px;
+    margin:auto;
+    color:#555;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.inventario-grid{
+    max-width:1200px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:25px;
+    padding:0 20px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.inventario-card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.inventario-card h3{
+    margin-bottom:20px;
+    color:#466942;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.inventario-card input,
+.inventario-card select{
+
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-plan-verde{
+
+    width:100%;
+    margin-top:10px;
+
+    background:#466942;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    padding:14px;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-plan-verde:hover{
+
+    background:#5a8155;
+}
+
+
+/* =========================
+   MENSAJES
+========================= */
+
+.mensaje-exito{
+
+    margin-top:20px;
+    background:#e9f8ec;
+
+    border-left:5px solid #2ecc71;
+
+    padding:15px;
+    border-radius:10px;
+}
+
+.mensaje-error{
+
+    margin-top:20px;
+    background:#fdeaea;
+
+    border-left:5px solid #e74c3c;
+
+    padding:15px;
+    border-radius:10px;
+}
+
+.mensaje-warning{
+
+    margin-top:20px;
+    background:#fff7df;
+
+    border-left:5px solid #f1c40f;
+
+    padding:15px;
+    border-radius:10px;
+}
+
+.mensaje-critico{
+
+    max-width:1200px;
+
+    margin:20px auto;
+
+    background:#fdeaea;
+
+    border-left:6px solid #c0392b;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    font-size:1.1rem;
+}
+
+
+/* =========================
+   TABLA
+========================= */
+
+.tabla-section{
+
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.tabla-section h2{
+
+    color:#466942;
+    margin-bottom:20px;
+}
+
+.tabla-inventario{
+
+    width:100%;
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+    overflow:hidden;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.tabla-inventario th{
+
+    background:#466942;
+    color:white;
+
+    padding:15px;
+}
+
+.tabla-inventario td{
+
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.tabla-inventario tr:hover{
+
+    background:#f8f8f8;
+}
+
+
+/* =========================
+   ALERTA VENCIMIENTO
+========================= */
+
+.alerta-vencimiento{
+
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.alerta-vencimiento h2{
+
+    color:#466942;
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .inventario-page h1{
+        font-size:2rem;
+    }
+
+    .inventario-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:12px;
+}
