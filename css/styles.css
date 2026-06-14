@@ -124,7 +124,6 @@ header {
 
     top:100%;
     margin-top:10px;
-    
     left:0;
 
     background:white;
@@ -174,11 +173,6 @@ header {
     background:#f5f6f8;
 
     color:#45603F;
-}
-.submenu{
-
-    display:flex;
-    flex-direction:column;
 }
 
 
