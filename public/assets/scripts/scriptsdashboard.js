@@ -129,7 +129,7 @@ if (btnActualizar) {
         const climas = [
 
             {
-                icono: "imagenes/sol.png",
+                icono: "assets/images/sol.png",
                 temperatura: "29°C",
                 estado: "Soleado",
                 humedad: "💧 Humedad: 62%",
@@ -138,7 +138,7 @@ if (btnActualizar) {
             },
 
             {
-                icono: "imagenes/nublado.png",
+                icono: "assets/images/nublado.png",
                 temperatura: "22°C",
                 estado: "Nublado",
                 humedad: "💧 Humedad: 74%",
@@ -147,7 +147,7 @@ if (btnActualizar) {
             },
 
             {
-                icono: "imagenes/lluviainicio.png",
+                icono: "assets/images/lluviainicio.png",
                 temperatura: "19°C",
                 estado: "Lluvias",
                 humedad: "💧 Humedad: 88%",

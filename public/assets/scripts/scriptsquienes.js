@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const images = [
-        "imagenes/bannersomos.png",
-        "imagenes/bannersomos2.png",
-        "imagenes/bannersomos3.jpeg",   
-        "imagenes/bannersomos4.jpg"
+        "assets/images/bannersomos.png",
+        "assets/images/bannersomos2.png",
+        "assets/images/bannersomos3.jpeg",   
+        "assets/images/bannersomos4.jpg"
     ];
 
     let i = 0;
