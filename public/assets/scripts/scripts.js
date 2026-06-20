@@ -10,17 +10,17 @@ const icono = document.getElementById("iconoClima");
 const climas = [
     {
         estado: "Soleado",
-        icono: "imagenes/sol.png",
+        icono: "assets/images/sol.png",
         lluvia: "Lluvia: 10%"
     },
     {
         estado: "Nublado",
-        icono: "imagenes/nublado.png",
+        icono: "assets/images/nublado.png",
         lluvia: "Lluvia: 30%"
     },
     {
         estado: "Lluvia",
-        icono: "imagenes/lluviainicio.png",
+        icono: "assets/images/lluviainicio.png",
         lluvia: "Lluvia: 80%"
     }
 ];
