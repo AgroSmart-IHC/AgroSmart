@@ -79,7 +79,9 @@ Incluye una funcionalidad de análisis de imágenes para identificar posibles ri
 ```text
 public
 │
-├── index.html
+├── inicio.html
+├── servicos.html
+├── ...
 ├── favicon.ico
 │
 └── assets
